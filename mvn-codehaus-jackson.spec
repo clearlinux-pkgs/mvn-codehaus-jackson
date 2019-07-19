@@ -4,18 +4,26 @@
 #
 Name     : mvn-codehaus-jackson
 Version  : 1.9.2
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar
 Source0  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar
-Source1  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.pom
-Source2  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar
-Source3  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.pom
-Source4  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar
-Source5  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.pom
-Source6  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar
-Source7  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.pom
-Source8  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar
-Source9  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.pom
+Source1  : https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar
+Source2  : https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.pom
+Source3  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar
+Source4  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom
+Source5  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.pom
+Source6  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar
+Source7  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.pom
+Source8  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar
+Source9  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.pom
+Source10  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar
+Source11  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.pom
+Source12  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.jar
+Source13  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.pom
+Source14  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar
+Source15  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.pom
+Source16  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar
+Source17  : https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -38,34 +46,58 @@ data components for the mvn-codehaus-jackson package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.8.3
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.8.3
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13
+cp %{SOURCE14} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13
+cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2
+cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2
+cp %{SOURCE17} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.pom
 
 
 %files
@@ -73,13 +105,21 @@ cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/jackson/ja
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.pom
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.pom
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.pom
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.pom
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.pom
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.jar
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.pom
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar
+/usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.pom
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar
 /usr/share/java/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.pom
